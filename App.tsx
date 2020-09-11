@@ -107,13 +107,13 @@ const App = () => {
   const syncOffset = (scene: any, y: any) => {
     console.log(scene, y);
     if (scene === 'first') {
-      secondRef?.current?.scrollToOffset({
+      secondRef?.current?.getNode().scrollToOffset({
         offset: y,
         animated: false,
       });
     }
     if (scene === 'second') {
-      firstRef?.current?.scrollToOffset({
+      firstRef?.current?.getNode().scrollToOffset({
         offset: y,
         animated: false,
       });
